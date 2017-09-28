@@ -1,6 +1,6 @@
 <?php
-include_once 'workflow/Workflow.php';
-include_once 'soap_activities/BargainFinderMaxSoapActivity.php';
+require_once 'workflow/Workflow.php';
+require_once 'soap_activities/BargainFinderMaxSoapActivity.php';
 
 
 $workflow = new Workflow(new BargainFinderMaxSoapActivity());

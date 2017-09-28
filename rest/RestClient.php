@@ -1,6 +1,6 @@
 <?php
-include_once 'configuration/SACSConfig.php';
-include_once 'rest/TokenHolder.php';
+require_once 'configuration/SACSConfig.php';
+require_once 'rest/TokenHolder.php';
 define("GET", "GET");
 define("POST", "POST");
 define("PUT", "PUT");

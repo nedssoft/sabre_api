@@ -1,7 +1,7 @@
 <?php
-include_once 'workflow/Activity.php';
-include_once 'rest/RestClient.php';
-include_once 'rest_activities/InstaFlightActivity.php';
+require_once 'workflow/Activity.php';
+require_once 'rest/RestClient.php';
+require_once 'rest_activities/InstaFlightActivity.php';
 
 class LeadPriceCalendarActivity implements Activity {
 

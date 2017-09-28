@@ -1,12 +1,12 @@
 <?php
-include_once 'SharedContext.php';
+require_once 'SharedContext.php';
 
 class Workflow {
     //put your code here
     private $sharedContext;
     private $startActivity;
     
-    public function Workflow(&$startActivity) {
+    public function __construct(&$startActivity) {
         $this->startActivity = $startActivity;
     }
     

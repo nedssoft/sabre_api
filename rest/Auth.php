@@ -1,5 +1,5 @@
 <?php
-include_once 'configuration/SACSConfig.php';
+require_once 'configuration/SACSConfig.php';
 
 class Auth {
     
