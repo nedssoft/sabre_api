@@ -29,33 +29,19 @@
 	<script>
     $(document).ready(function(){
 	$("#workflow-form").submit(function(event) {
-		event.preventDefault();
 		var over = '<div id="overlay">' +
             '<img id="loading" src="http://www.swellalerts.com/img/plane_loading.gif"/>' +
-           '</div>';
-      $(over).appendTo('body');
-	// 	$.post($(this).attr('action'), $(this).serialize(), function(json) {
-                    
- //                    console.log(JSON.parse(json));
- //                   // $("#results").text(JSON.stringify(json, null, 2));
- //                    //s$("#results").text(json);
- //                    $('#overlay').remove();
-	// 	});
-	// 	return false;
-	// });
-			$.ajax({
-					type: 'POST',
-					url: 'start_rest_workflow.php',
-					data: $('#workflow-form').serialize(), //extracts the data from the form
-					dataType: 'json', //set the response datatype
-					encode:   true
-				}).done(function(data){
-					$('#overlay').remove();
-                       console.log(data);
-
-				});
-    }); 
-    });	
+            '</div>';
+        $(over).appendTo('body');
+		$.post($(this).attr('action'), $(this).serialize(), function(json) {
+                    console.log(json);
+                    //$("#results").text(JSON.stringify(json, null, 2));
+                    $("#results").text(json);
+                    $('#overlay').remove();
+		});
+		return false;
+	});
+    }); 	
         </script>
 	</head>
 	<body>
